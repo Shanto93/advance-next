@@ -1,3 +1,4 @@
+import GoToButton from "@/components/GoToButton";
 import type { Metadata } from "next";
 import React from "react";
 
@@ -8,8 +9,11 @@ export const metadata: Metadata = {
 
 const HomePage = () => {
   return (
-    <div>
-      <h2>Home Page</h2>
+    <div className="ml-10">
+      <h2 className="mt-2">Home Page</h2>
+      <GoToButton className="mt-2">
+        Go to Settings
+      </GoToButton>
     </div>
   );
 };
