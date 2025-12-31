@@ -1,10 +1,12 @@
 import NavLink from "@/components/NavLink";
-import Link from "next/link";
 
 const Navbar = () => {
   return (
-    <div>
-      <ul className="flex gap-5 p-4 border-b border-b-black">
+    <div className="p-4 border-2 rounded-full border-b-black font-semibold flex justify-between items-center">
+      <div className="ml-10">
+        <h1>Logo</h1>
+      </div>
+      <ul className="flex gap-5 ">
         <li>
           <NavLink path="/">Home</NavLink>
         </li>
@@ -17,7 +19,15 @@ const Navbar = () => {
         <li>
           <NavLink path="/dashboard/settings">Settings</NavLink>
         </li>
+        <li>
+          <NavLink path="/blogs">Blogs</NavLink>
+        </li>
       </ul>
+      <div className="mr-10">
+        <button className="border bg-white px-3 py-1 rounded-2xl">
+          Login
+        </button>
+      </div>
     </div>
   );
 };

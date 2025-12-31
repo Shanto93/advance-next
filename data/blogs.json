@@ -1,0 +1,52 @@
+[
+  {
+    "id": 1,
+    "blog_title": "The Future of Web Development",
+    "blog_description": "Explore the latest trends in web technologies, including AI integration, serverless architecture, and new JavaScript frameworks."
+  },
+  {
+    "id": 2,
+    "blog_title": "10 Tips for Healthy Living",
+    "blog_description": "A comprehensive guide to maintaining a balanced diet, regular exercise routine, and mental well-being for a better lifestyle."
+  },
+  {
+    "id": 3,
+    "blog_title": "Mastering React Hooks",
+    "blog_description": "An in-depth look at how to use useState, useEffect, and custom hooks to write cleaner and more efficient React code."
+  },
+  {
+    "id": 4,
+    "blog_title": "Travel Guide: Exploring Japan",
+    "blog_description": "Discover the hidden gems of Tokyo and Kyoto, from ancient temples to modern shopping districts and delicious street food."
+  },
+  {
+    "id": 5,
+    "blog_title": "Understanding Python for Data Science",
+    "blog_description": "Learn why Python is the most popular language for data analysis and how to get started with libraries like Pandas and NumPy."
+  },
+  {
+    "id": 6,
+    "blog_title": "The Art of Minimalist Photography",
+    "blog_description": "Tips and techniques on how to capture stunning images using negative space, simple compositions, and natural lighting."
+  },
+  {
+    "id": 7,
+    "blog_title": "Budgeting 101: Manage Your Finances",
+    "blog_description": "Simple and effective strategies to save money, track your expenses, and plan for your financial future without stress."
+  },
+  {
+    "id": 8,
+    "blog_title": "Why Next.js is Best for SEO",
+    "blog_description": "How Server-Side Rendering (SSR) and Static Site Generation (SSG) in Next.js help your website rank higher on Google."
+  },
+  {
+    "id": 9,
+    "blog_title": "Easy 15-Minute Dinner Recipes",
+    "blog_description": "Quick and delicious meal ideas for busy professionals that require minimal ingredients and preparation time."
+  },
+  {
+    "id": 10,
+    "blog_title": "The Benefits of Reading Daily",
+    "blog_description": "How reading books every day can improve your focus, expand your vocabulary, and reduce stress levels significantly."
+  }
+]
