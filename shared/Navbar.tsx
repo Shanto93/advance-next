@@ -11,6 +11,9 @@ const Navbar = () => {
           <NavLink path="/">Home</NavLink>
         </li>
         <li>
+          <NavLink path="/parallel-dashboard">Parallel Dashboard</NavLink>
+        </li>
+        <li>
           <NavLink path="/about">About Us</NavLink>
         </li>
         <li>
