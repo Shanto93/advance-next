@@ -24,7 +24,7 @@ const Navbar = () => {
         </li>
       </ul>
       <div className="mr-10">
-        <button className="border bg-white px-3 py-1 rounded-2xl">
+        <button className="border bg-white px-3 py-1 rounded-2xl hover:border-amber-600 hover:text-amber-600">
           Login
         </button>
       </div>
