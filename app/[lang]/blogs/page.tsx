@@ -1,5 +1,5 @@
 import React from "react";
-import blogs from "./../../data/blogs.json";
+import blogs from "../../../data/blogs.json";
 import BlogButton from "@/components/BlogButton";
 
 const BlogsPage = () => {

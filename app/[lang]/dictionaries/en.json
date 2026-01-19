@@ -1,0 +1,15 @@
+{
+  "products": {
+    "cart": "Add to Cart"
+  },
+  "navbar": {
+    "home": "Home",
+    "parallel": "Parallel Dashboard",
+    "about": "About Us",
+    "analytics": "Analytics",
+    "settings": "Settings",
+    "blogs": "Blogs",
+    "logo": "Logo",
+    "login": "Login"
+  }
+}
