@@ -1,22 +1,9 @@
-import Image from "next/image";
 import { notFound } from "next/navigation";
 
+import type { Album, Locale, PageParams } from "@/types/Home/home.types";
 import { getAlbums } from "@/utils/getAlbums";
+import Link from "next/link";
 import { getDictionary, hasLocale } from "./dictionaries";
-
-export type Album = {
-  albumId: number;
-  id: number;
-  title: string;
-  url: string;
-  thumbnailUrl: string;
-};
-
-
-type Locale = "en" | "bn";
-
-// Next 15 style (params is Promise)
-type PageParams = Promise<{ lang: string }>;
 
 export default async function Page({ params }: { params: PageParams }) {
   const { lang } = await params;
@@ -29,19 +16,23 @@ export default async function Page({ params }: { params: PageParams }) {
 
   return (
     <div className="p-6 space-y-6">
-      <button className="border px-3 py-2 rounded">
-        {dict.products.cart}
-      </button>
-
+      <div className="flex justify-between items-center">
+        <button className="border bg-amber-300 text-white px-3 py-2 rounded">
+          {dict.products.cart}
+        </button>
+        <Link href="/jokes">
+          <button className="border bg-amber-700 text-white px-3 py-2 rounded">Read Jokes</button>
+        </Link>
+      </div>
       <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
         {albums.map((album) => (
           <div key={album.id} className="border rounded p-3 space-y-2">
-            <Image
+            {/* <Image
               src={album.thumbnailUrl}
               alt={album.title}
               width={150}
               height={150}
-            />
+            /> */}
             <p className="text-sm">{album.title}</p>
           </div>
         ))}

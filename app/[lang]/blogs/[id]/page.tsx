@@ -1,4 +1,4 @@
-import blogs from "../../../data/blogs.json";
+import blogs from "../../../../data/blogs.json";
 
 interface IBlog {
   id: number;
@@ -7,7 +7,10 @@ interface IBlog {
 }
 
 export async function generateStaticParams() {
-  return blogs.map((blog) => ({ id: blog.id }));
+  // FIX: Added .toString() because URL params must be strings
+  return blogs.map((blog) => ({
+    id: blog.id.toString(),
+  }));
 }
 
 const BlogDetailsPage = async ({
@@ -16,7 +19,7 @@ const BlogDetailsPage = async ({
   params: Promise<{ id: string }>;
 }) => {
   const { id } = await params;
-  const blog_id = parseInt(id);
+  const blog_id = parseInt(id); // Converts URL string back to number for lookup
   const blog: IBlog | undefined = blogs.find((blog) => blog.id === blog_id);
 
   return (

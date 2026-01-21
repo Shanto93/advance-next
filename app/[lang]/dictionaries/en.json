@@ -4,6 +4,7 @@
   },
   "navbar": {
     "home": "Home",
+    "jokes": "Jokes",
     "parallel": "Parallel Dashboard",
     "about": "About Us",
     "analytics": "Analytics",
