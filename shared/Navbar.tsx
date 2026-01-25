@@ -19,30 +19,42 @@ export default async function Navbar({ lang }: { lang: string }) {
   ];
 
   return (
-    <div className="p-4 border-2 rounded-full border-b-black font-semibold flex justify-between items-center">
-      <div className="ml-10">
-        <h1>{dict.navbar.logo} </h1>
+    <nav className="w-full px-4 md:px-6 my-3">
+      <div
+        className="
+        p-4 border-2 border-b-black font-semibold 
+        flex flex-col lg:flex-row justify-between items-center gap-4 lg:gap-0
+        rounded-3xl lg:rounded-full
+        max-w-7xl mx-auto
+      "
+      >
+        {/* Logo Section */}
+        <div className="lg:ml-6">
+          <h1 className="text-xl md:text-2xl">{dict.navbar.logo}</h1>
+        </div>
+
+        {/* Navigation Links */}
+        <ul className="flex flex-wrap justify-center gap-3 md:gap-5 text-sm md:text-base">
+          {links.map((l) => (
+            <li key={l.path}>
+              <NavLink path={`/${lang}${l.path === "/" ? "" : l.path}`}>
+                {l.label}
+              </NavLink>
+            </li>
+          ))}
+        </ul>
+
+        {/* Action Buttons (Language + Login) */}
+        <div className="lg:mr-6 flex items-center gap-3">
+          <Suspense fallback={<div>...</div>}>
+            <LanguageToggle />
+          </Suspense>
+
+          <button className="border bg-white px-4 py-1.5 rounded-2xl hover:border-amber-600 hover:text-amber-600 transition-colors">
+            {dict.navbar.login}
+          </button>
+        </div>
       </div>
-
-      <ul className="flex gap-5">
-        {links.map((l) => (
-          <li key={l.path}>
-            <NavLink path={`/${lang}${l.path === "/" ? "" : l.path}`}>
-              {l.label}
-            </NavLink>
-          </li>
-        ))}
-      </ul>
-
-      <div className="mr-10 flex items-center gap-3">
-        <Suspense fallback={<div>...</div>}>
-          <LanguageToggle />
-        </Suspense>
-
-        <button className="border bg-white px-3 py-1 rounded-2xl hover:border-amber-600 hover:text-amber-600">
-          {dict.navbar.login}
-        </button>
-      </div>
-    </div>
+    </nav>
   );
 }

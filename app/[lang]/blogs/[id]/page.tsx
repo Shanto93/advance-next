@@ -7,7 +7,6 @@ interface IBlog {
 }
 
 export async function generateStaticParams() {
-  // FIX: Added .toString() because URL params must be strings
   return blogs.map((blog) => ({
     id: blog.id.toString(),
   }));
@@ -19,7 +18,7 @@ const BlogDetailsPage = async ({
   params: Promise<{ id: string }>;
 }) => {
   const { id } = await params;
-  const blog_id = parseInt(id); // Converts URL string back to number for lookup
+  const blog_id = parseInt(id);
   const blog: IBlog | undefined = blogs.find((blog) => blog.id === blog_id);
 
   return (

@@ -1,5 +1,2 @@
-const nextConfig = {
-  images: {
-  },
-};
+const nextConfig = {};
 export default nextConfig;

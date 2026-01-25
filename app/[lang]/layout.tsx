@@ -17,7 +17,6 @@ export default async function RootLayout({
   params,
 }: {
   children: React.ReactNode;
-  // FIX: Changed "en" | "bn" to string to satisfy Next.js types
   params: Promise<{ lang: string }>;
 }) {
   const { lang } = await params;
