@@ -11,9 +11,11 @@ const Users = async () => {
           <p>No users found.</p>
         ) : (
           <ul className="space-y-2">
-            {users.map((user,index) => (
+            {users.map((user, index) => (
               <li key={user._id} className="p-4 bg-gray-100 rounded-lg">
-                {'('}{index+1}{')'} {user.name} : {user.email}
+                {"("}
+                {index + 1}
+                {")"} {user.name} : {user.email}
               </li>
             ))}
           </ul>

@@ -1,8 +1,8 @@
 "use server";
 
 import dbConnect from "@/lib/dbConnect";
-import { User } from "../models/user.model";
 import { revalidatePath } from "next/cache";
+import { User } from "../models/user.model";
 
 export const addUser = async (formData: FormData) => {
   const name = formData.get("name");
@@ -15,11 +15,16 @@ export const addUser = async (formData: FormData) => {
 
   try {
     await dbConnect();
+    // await wait(3000);
 
     await new User(userData).save();
-    revalidatePath('/about')
+    revalidatePath("/about");
 
-    return { success: true, message: "User added successfully", data: userData };
+    return {
+      success: true,
+      message: "User added successfully",
+      data: userData,
+    };
   } catch (error) {
     console.error("Error adding user:", error);
     return { success: false, message: "Failed to add user" };
@@ -27,12 +32,12 @@ export const addUser = async (formData: FormData) => {
 };
 
 export const getUsers = async () => {
-    try {
-        await dbConnect();
-        const users = await User.find({});
-        return users;
-    } catch (error) {
-        console.error("Error fetching users:", error);
-        return [];
-    }
+  try {
+    await dbConnect();
+    const users = await User.find({});
+    return users;
+  } catch (error) {
+    console.error("Error fetching users:", error);
+    return [];
+  }
 };
