@@ -1,4 +1,5 @@
 import { addUser } from "@/server/actions/users.actions";
+import AboutButton from "./AboutButton";
 
 const AboutForm = async () => {
   const handleFormSubmit = async (formData: FormData) => {
@@ -57,12 +58,7 @@ const AboutForm = async () => {
 
           {/* Submit Button */}
           <div className="pt-2">
-            <button
-              type="submit"
-              className="w-full bg-indigo-600 hover:bg-indigo-700 text-white font-semibold py-3 rounded-lg transition-colors duration-200 shadow-md hover:shadow-lg active:scale-95 transform"
-            >
-              Submit
-            </button>
+            <AboutButton></AboutButton>
           </div>
         </div>
       </form>
