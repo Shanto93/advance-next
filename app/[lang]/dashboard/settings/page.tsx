@@ -4,7 +4,7 @@ const SettingsPage = () => {
 
   return (
     <div>
-      <h2>This is settings Page</h2>
+      <h2 className="font-mono">This is settings Page</h2>
       <div className="w-96 border-2  border-teal-300 relative">
         <Image className="object-cover" fill src={myImg} alt="My Photo"></Image>
       </div>

@@ -12,6 +12,7 @@ export default async function Navbar({ lang }: { lang: string }) {
     { label: dict.navbar.home, path: "/" },
     { label: dict.navbar.parallel, path: "/parallel-dashboard" },
     { label: dict.navbar.about, path: "/about" },
+    { label: dict.navbar.form, path: "/form" },
     { label: dict.navbar.analytics, path: "/dashboard/analytics" },
     { label: dict.navbar.settings, path: "/dashboard/settings" },
     { label: dict.navbar.blogs, path: "/blogs" },

@@ -1,7 +1,11 @@
 import type { Metadata } from "next";
+import { Geist } from 'next/font/google'
 import "../globals.css";
-
 import Navbar from "@/shared/Navbar";
+
+const geist = Geist({
+  subsets: ['latin'],
+})
 
 export const metadata: Metadata = {
   title: "Advance Next JS",
@@ -22,7 +26,7 @@ export default async function RootLayout({
   const { lang } = await params;
 
   return (
-    <html lang={lang}>
+    <html lang={lang} className={geist.className}>
       <body>
         <div className="mx-20">
           <div className="mb-5 mt-3">

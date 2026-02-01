@@ -5,6 +5,7 @@
   "navbar": {
     "home": "Home",
     "jokes": "Jokes",
+    "form": "Form",
     "parallel": "Parallel Dashboard",
     "about": "About Us",
     "analytics": "Analytics",
